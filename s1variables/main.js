@@ -7,14 +7,17 @@ function addition(num1,num2){
 }
 console.log(addition(5,5))
 
+// const add = (a,b) => a+b
 //2,. Crear una función que evalúe si un número es par o impar
 
-function evenOrOdd (number){
+function isEvenOrOdd (number){
     let result
     result = number%2===0 ?  "El numero es par" :  "el numero es impar"
     console.log(result)
 }
-(evenOrOdd(5))
+(isEvenOrOdd(5))
+
+// const isEven = (num) => num % 2 ===0
 
 //3,. Crear una función que escriba en consola letra por letra de un nombre
 function letterByLetter (name){
