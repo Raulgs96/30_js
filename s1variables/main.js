@@ -5,7 +5,8 @@ function addition(num1,num2){
     let result = num1 + num2
     return result
 }
-console.log(addition(5,5))
+let add1=addition(4,4)
+console.log(add1)
 
 // const add = (a,b) => a+b
 //2,. Crear una función que evalúe si un número es par o impar
