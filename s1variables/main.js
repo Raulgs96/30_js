@@ -22,7 +22,7 @@ function isEvenOrOdd (number){
 
 //3,. Crear una función que escriba en consola letra por letra de un nombre
 function letterByLetter (name){
-    for (i=0; i<=name.length; i++){
+    for (i=0; i<name.length; i++){
         console.log(name[i])
     }
 }
