@@ -8,13 +8,13 @@
     const stringFunction = (text, firstPosition, lastPosition) => { //inicia la funcion con los tres parametros a recibir 
          if (firstPosition<text.length && lastPosition<= text.length){ //Evalua que los numeros ingresados esen dentro de los valores de la longitus del string 
             let newText= text.substring(firstPosition, lastPosition); // extrae los caracteres con los valores ingresados
-             return console.log(newText)                                 // imprime el nuevo string
+              console.log(newText)                                 // imprime el nuevo string
             }else {
         console.log("Hay un error en la longitud del caracter")
             }
         }       
 //let showNewString = 
-stringFunction("Regresamos a las sombras", 45, 15)
+stringFunction("Regresamos a las sombras", 5, 15)
 //console.log(showNewString)
 
  /*    
