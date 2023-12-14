@@ -62,7 +62,7 @@ let cities = [
           -si la ciudad tiene una sola palabra, mostramos los primeros 3 caracteres del nombre de la ciudad
               Sidney => Sid
           - si la ciudad tiene más de una palabra, mostramos las iniciales de cada palabra
-              ciudad del cabo =>  C.D.C.*/
+              ciudad del cabo =>  C.D.C.
         
     const initialsCities = (arrayData) =>{
         arrayData.forEach((item) => {
@@ -87,12 +87,12 @@ let cities = [
     let exercice2 = initialsCities(cities)
     console.log(exercice2)
 
-    
+    */
  /* 3.- usando el array persons, necesito una nueva lista que contenga únicamente los nombres completos de cada persona.*/
  //persons.map((person) => console.log(`Fullname; ${person.nombre} ${person.apellidos}`))
 
  /* 4.- usando el array persons, necesito que los correos de todas las personas sean cambiados a {persona}@kodemia.mx */
- /*const replaceEmail = (persons) =>{
+ const replaceEmail = (persons) =>{
  persons.forEach((person)=>{
     person.correo = person.correo.replace(`@example.com`,`@kodemia.mx` )
     return persons
@@ -100,4 +100,4 @@ let cities = [
  return persons
 }
 let newEmail = replaceEmail(persons)
-console.log(newEmail)*/
+console.log(newEmail)
