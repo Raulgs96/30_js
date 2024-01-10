@@ -35,7 +35,7 @@ const savePet = async (pet) => {
     printAllPets(data);
   };
   const createPetItem=(petData)=>{
-    let {name,breed,img} = petData
+    let {name,breed,img,key} = petData
     let petCard = document.createElement("div");
     petCard.classList.add("card")
     let imgCard = document.createElement("img")
@@ -50,9 +50,18 @@ const savePet = async (pet) => {
     let breedCard = document.createElement("h5")
     breedCard.classList.add("card-title")
     let textCardBreed = document.createTextNode(`Raza: ${ breed}  `)
+    let deleteButton = document.createElement("button")
+    deleteButton.classList.add("btn", "btn-danger")
+    let deleteButtonText = document.createTextNode("Delete pet")
+    deleteButton.append(deleteButtonText)
+    deleteButton.addEventListener("click", async () => {
+        let data = await deletePet(key);
+        getAllPets();
+      })
     breedCard.append(textCardBreed)
-    bodyCard.append(nameCard,breedCard)
+    bodyCard.append(nameCard,breedCard,deleteButton)
     petCard.append(imgCard,bodyCard)
+    
     
     return petCard
 }
@@ -73,5 +82,14 @@ const printAllPets = (pets) =>{
 }
  getAllPets()
   
-   
+ const deletePet = async (petKey) => {
+    let response = await fetch(
+      `https://pets-32401-default-rtdb.firebaseio.com/${petKey}.json`,
+      {
+        method: "DELETE",
+      }
+    );
+    let data = await response.json();
+    return data;
+  };
    
